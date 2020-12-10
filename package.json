@@ -1,0 +1,30 @@
+{
+  "name": "HealthcareCodesetAPI",
+  "version": "1.0.0",
+  "description": "## Purpose To make codesets (ex: HCPCS, NDC) easily accessible for companies/projects.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tannerbyers/HealthcareCodesetAPI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tannerbyers/HealthcareCodesetAPI/issues"
+  },
+  "homepage": "https://github.com/tannerbyers/HealthcareCodesetAPI#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "extract-zip": "^2.0.1",
+    "got": "^11.8.0",
+    "jsdom": "^16.4.0",
+    "mongodb": "^3.6.3",
+    "node-cron": "^2.0.3",
+    "node-xlsx": "^0.15.0"
+  }
+}
