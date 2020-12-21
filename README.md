@@ -8,7 +8,7 @@ Ediapi is a api built around Healthcare Codes. It scrapes CMS and other healthca
 * Can provide **Code, Description, Dates, and more** for codes or paremeteries specified. You do not have to know the code to search! 
 
 <p align="center">
-  <img src="./img/example.png" alt="Size Limit CLI" width="738">
+  <img src="./img/example.png" alt="Ediapi response" width="738">
 </p>
 
 
