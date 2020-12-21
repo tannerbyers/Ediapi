@@ -1,8 +1,41 @@
+<h1 align="center">
+	<img
+		width="300"
+		alt="Ediapi"
+		src="./demo/logo_transparent.png">
+</h1>
+
+<h3 align="center">
+	Opensource Healthcare Codeset API
+</h3>
+
 <p align="center">
-  <img src="./demo/logo_transparent.png" alt="Ediapi logo" width="120">
+	<strong>
+		<a href="https://thelounge.chat/">Website</a>
+		•
+		<a href="https://thelounge.chat/docs">Docs</a>
+		•
+		<a href="https://demo.thelounge.chat/">Demo</a>
+	</strong>
+</p>
+<p align="center">
+	<a href="https://demo.thelounge.chat/"><img
+		alt="#thelounge IRC channel on freenode"
+		src="https://img.shields.io/badge/freenode-%23thelounge-415364.svg?colorA=ff9e18"></a>
+	<a href="https://yarn.pm/thelounge"><img
+		alt="npm version"
+		src="https://img.shields.io/npm/v/thelounge.svg?colorA=333a41&maxAge=3600"></a>
+	<a href="https://github.com/thelounge/thelounge/actions"><img
+		alt="Build Status"
+		src="https://github.com/thelounge/thelounge/workflows/Build/badge.svg"></a>
+	<a href="https://npm-stat.com/charts.html?package=thelounge&from=2016-02-12"><img
+		alt="Total downloads on npm"
+		src="https://img.shields.io/npm/dy/thelounge.svg?colorA=333a41&colorB=007dc7&maxAge=3600&label=Downloads"></a>
 </p>
 
-Ediapi is a api built around Healthcare Codes. It scrapes CMS and other healthcare websites, pulls and formats their codeset spreadsheets and provides this data via an easy to use api.
+<p align="center">
+	<img src="https://raw.githubusercontent.com/thelounge/thelounge.github.io/master/img/thelounge-screenshot.png" width="550">
+</p>
 
 * **HCPCS** and **NDC** Codeets currently supported.
 * Add Ediapi your software to validate x12 transactions.
@@ -20,6 +53,9 @@ Ediapi is a api built around Healthcare Codes. It scrapes CMS and other healthca
 | Server  | Heroku  |
 | Database  | MongoDB  |
 | Backend | Javascript | 
+
+## Process
+Ediapi is a api built around Healthcare Codes. It scrapes CMS and other healthcare websites, pulls and formats their codeset spreadsheets and provides this data via an easy to use api.
 
 ## Background
 I want to make an easy to use frontend and api for healthcare codesets so
