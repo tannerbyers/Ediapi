@@ -1,4 +1,4 @@
-# Ediapi [![Cult Of Martians]
+# Ediapi
 Ediapi is a api built around Healthcare Codes. It scrapes CMS and other healthcare websites, pulls and formats their codeset spreadsheets and provides this data via an easy to use api.
 
 * **HCPCS** and **NDC** Codeets currently supported.
@@ -12,7 +12,7 @@ Ediapi is a api built around Healthcare Codes. It scrapes CMS and other healthca
 </p>
 
 
-| System Parts  | Company/Framework Used |
+| System Parts  | Technology Used |
 | ------------- | ------------- |
 | Server  | Heroku  |
 | Database  | MongoDB  |
