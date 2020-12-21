@@ -6,6 +6,7 @@ const ObjectId = require("mongodb").ObjectID;
 const CONNECTION_URL =
   "mongodb+srv://codeUser:P4ppN72KhGuGpJD9@codetable.ubtee.mongodb.net/CodeTable?retryWrites=true&w=majority";
 const DATABASE_NAME = "CodeTable";
+const config = require('./config.json');
 
 var app = Express();
 app.use(BodyParser.json());
@@ -32,22 +33,34 @@ app.get("/codes", (request, response) => {
     if (error) {
       return response.status(500).send(error);
     }
+    console.log(result)
     response.send(result);
   });
 });
 
 app.get("/codes/:id", (request, response) => {
-  collection.findOne({ code: request.params.id }, (error, result) => {
-    if (error) {
-      return response.status(500).send(error);
-    }
-    response.send(result);
-  });
+  collection
+    .find({
+      $or: [
+        {
+          code: { $regex: `.*${request.params.id}.*` },
+        },
+        {
+          longDescription: { $regex: `.*${request.params.id}.*` },
+        },
+      ],
+    })
+    .toArray(function (error, result) {
+      if (error) {
+        return response.status(500).send(error);
+      }
+      response.send(result);
+    });
 });
 
 // Schedule tasks to be run on the server.
 
-// Load HCPCS Codes From Website
+// Load HCPCS Codes From CMS Annually
 cron.schedule("0 0 1 1 *", function () {
   console.log("Running tasks every year");
 });

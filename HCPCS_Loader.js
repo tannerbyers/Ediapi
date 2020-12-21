@@ -105,7 +105,7 @@ const XLSToMongoDB = async () => {
           );
           await collection.update(doc, doc, { upsert: true });
         }
-
+        console.log("Finsihed Updated HCPCS Codes and HCPCS Modifiers")
         client.close();
       });
     });

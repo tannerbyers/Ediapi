@@ -1,4 +1,7 @@
-# Ediapi
+<h4 align="center">
+  <img src="./demo/logo_transparent.png" alt="Ediapi logo">
+</h4>
+
 Ediapi is a api built around Healthcare Codes. It scrapes CMS and other healthcare websites, pulls and formats their codeset spreadsheets and provides this data via an easy to use api.
 
 * **HCPCS** and **NDC** Codeets currently supported.
@@ -8,7 +11,7 @@ Ediapi is a api built around Healthcare Codes. It scrapes CMS and other healthca
 * Can provide **Code, Description, Dates, and more** for codes or paremeteries specified. You do not have to know the code to search! 
 
 <p align="center">
-  <img src="./img/example.png" alt="Ediapi response" width="738">
+  <img src="./demo/example.png" alt="Ediapi response" width="738">
 </p>
 
 
@@ -22,7 +25,7 @@ Ediapi is a api built around Healthcare Codes. It scrapes CMS and other healthca
 I want to make an easy to use frontend and api for healthcare codesets so
 that people can easily make projects or improvie their existing ones. 
 
-I do not work on this full time so it will not always be up to date. 
+⚠️ I do not work on this full time so it will not always be up to date. 
 The updates to the codesets are made by either cron jobs (depending on when the
 codesets are released) or via manual updates which I do w/ my free time. 
 
