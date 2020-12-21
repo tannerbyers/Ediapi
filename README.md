@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./demo/logo_transparent.png" alt="Ediapi logo">
+  <img src="./demo/logo_transparent.png" alt="Ediapi logo" width="120">
 </p>
 
 Ediapi is a api built around Healthcare Codes. It scrapes CMS and other healthcare websites, pulls and formats their codeset spreadsheets and provides this data via an easy to use api.
