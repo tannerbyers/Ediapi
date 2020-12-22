@@ -19,15 +19,9 @@
 	</strong>
 </p>
 <p align="center">
-	<a href="https://demo.thelounge.chat/"><img
-		alt="#thelounge IRC channel on freenode"
-		src="https://img.shields.io/badge/freenode-%23thelounge-415364.svg?colorA=ff9e18"></a>
-	<a href="https://yarn.pm/thelounge"><img
-		alt="npm version"
-		src="https://img.shields.io/npm/v/thelounge.svg?colorA=333a41&maxAge=3600"></a>
 	<a href="https://github.com/thelounge/thelounge/actions"><img
 		alt="Build Status"
-		src="https://github.com/thelounge/thelounge/workflows/Build/badge.svg"></a>
+		src="https://github.com/tannerbyers/ediapi/workflows/Build/badge.svg"></a>
 	<a href="https://img.shields.io/github/languages/code-size/tannerbyers/ediapi"><img
 		alt="Total project size"
 		src="https://img.shields.io/github/languages/code-size/tannerbyers/ediapi"></a>
