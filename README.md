@@ -32,8 +32,9 @@
 
 <p align="center">
 	<img src="./demo/demo.PNG" width="550">
-	<p align="center"> Demo of a autofill feature using ediapi </p>
+	<p align="center">Autofill demo app using ediapi </p>
 </p>
+
 
 * Run **Locally** w/ customziations or use the **<a href="https://healthcarecodesetapi.herokuapp.com/codes/"> public api </a>**.
 * **HCPCS** and **NDC** Code sets currently supported.
