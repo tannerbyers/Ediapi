@@ -25,6 +25,9 @@
 	<a href="https://img.shields.io/github/languages/code-size/tannerbyers/ediapi"><img
 		alt="Total project size"
 		src="https://img.shields.io/github/languages/code-size/tannerbyers/ediapi"></a>
+	<a href="https://img.shields.io/github/languages/code-size/tannerbyers/ediapi"><img
+		alt="Is currently maintained"
+		src="https://img.shields.io/maintenance/yes/2020"></a>
 </p>
 
 <p align="center">
