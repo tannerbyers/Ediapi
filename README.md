@@ -32,18 +32,26 @@
 
 <p align="center">
 	<img src="https://raw.githubusercontent.com/thelounge/thelounge.github.io/master/img/thelounge-screenshot.png" width="550">
+	<p align="center"> Demo of a autofill feature using ediapi </p>
 </p>
 
-* **HCPCS** and **NDC** Codeets currently supported.
+* Run **Locally** w/ customziations or use the **<a href="https://healthcarecodesetapi.herokuapp.com/codes/"> public api </a>**.
+* **HCPCS** and **NDC** Code sets currently supported.
 * Add Ediapi to your existing software to validate **x12 or HL7** transactions.
 * **Hight Customized** to fit different use cases: large file based x12 processing engines
  or small online widgets (like autofill tool).
-* Can provide **Code, Description, Dates, and more** for codes or paremeteries specified. You do not have to know the code to search! 
+* Can provide **Code, Description, Dates, and more** for codes or paremeteries specified. Great for newcomers into the healthcare field! 
 
-<p align="center">
-  <img src="./demo/example.png" alt="Ediapi response" width="738">
-</p>
+---
 
+## Usage
+```
+git clone https://github.com/tannerbyers/Ediapi.git
+cd Ediapi
+npm install
+npm run update-codes
+npm start 
+```
 
 | System Parts  | Technology Used |
 | ------------- | ------------- |
