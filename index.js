@@ -8,7 +8,11 @@ const CONNECTION_URL =
 const DATABASE_NAME = "CodeTable";
 const config = require("./config.json");
 
+// Import the library:
+var cors = require('cors');
+
 var app = Express();
+app.use(cors());
 app.use(BodyParser.json());
 app.use(BodyParser.urlencoded({ extended: true }));
 var database, collection;
