@@ -19,9 +19,9 @@
 	</strong>
 </p>
 <p align="center">
-	<a href="https://github.com/tannerbyers/ediapi/actions"><img
-		alt="Build Status"
-		src="https://github.com/tannerbyers/ediapi/workflows/Build/badge.svg"></a>
+	<a href="https://github.com/tannerbyers/Ediapi/issues"><img
+		alt="Open Issues"
+		src="https://img.shields.io/github/issues/tannerbyers/ediapi"></a>
 	<a href="https://img.shields.io/github/languages/code-size/tannerbyers/ediapi"><img
 		alt="Total project size"
 		src="https://img.shields.io/github/languages/code-size/tannerbyers/ediapi"></a>
