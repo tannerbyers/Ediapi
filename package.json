@@ -4,7 +4,7 @@
   "description": "## Purpose To make codesets (ex: HCPCS, NDC) easily accessible for companies/projects.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
     "update-codes": "node HCPCS_Loader.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
