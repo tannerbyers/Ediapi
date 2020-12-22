@@ -31,7 +31,7 @@
 </p>
 
 <p align="center">
-	<img src="https://raw.githubusercontent.com/thelounge/thelounge.github.io/master/img/thelounge-screenshot.png" width="550">
+	<img src="./demo/demo.png" width="550">
 	<p align="center"> Demo of a autofill feature using ediapi </p>
 </p>
 
