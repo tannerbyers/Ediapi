@@ -28,9 +28,9 @@
 	<a href="https://github.com/thelounge/thelounge/actions"><img
 		alt="Build Status"
 		src="https://github.com/thelounge/thelounge/workflows/Build/badge.svg"></a>
-	<a href="https://npm-stat.com/charts.html?package=thelounge&from=2016-02-12"><img
-		alt="Total downloads on npm"
-		src="https://img.shields.io/npm/dy/thelounge.svg?colorA=333a41&colorB=007dc7&maxAge=3600&label=Downloads"></a>
+	<a href="https://img.shields.io/github/languages/code-size/tannerbyers/ediapi"><img
+		alt="Total project size"
+		src="https://img.shields.io/github/languages/code-size/tannerbyers/ediapi"></a>
 </p>
 
 <p align="center">
