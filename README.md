@@ -40,7 +40,7 @@
 * Add Ediapi to your existing software to validate **x12 or HL7** transactions.
 * **Hight Customized** to fit different use cases: large file based x12 processing engines
  or small online widgets (like autofill tool).
-* Can provide **Code, Description, Dates, and more** for codes or paremeteries specified. You do not have to know the code to search! 
+* Can provide **Code, Description, Dates, and more** for codes or paremeteries specified. Great for newcomers into the healthcare field! 
 
 ---
 
