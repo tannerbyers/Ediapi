@@ -19,7 +19,7 @@
 	</strong>
 </p>
 <p align="center">
-	<a href="https://github.com/thelounge/thelounge/actions"><img
+	<a href="https://github.com/tannerbyers/ediapi/actions"><img
 		alt="Build Status"
 		src="https://github.com/tannerbyers/ediapi/workflows/Build/badge.svg"></a>
 	<a href="https://img.shields.io/github/languages/code-size/tannerbyers/ediapi"><img
