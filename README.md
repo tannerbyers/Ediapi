@@ -44,10 +44,7 @@
  or small online widgets (like autofill tool).
 * Can provide **Code, Description, Dates, and more** for codes or paremeteries specified. You do not have to know the code to search! 
 
-<p align="center">
-  <img src="./demo/example.png" alt="Ediapi response" width="738">
-</p>
-
+---
 
 | System Parts  | Technology Used |
 | ------------- | ------------- |
