@@ -35,6 +35,7 @@
 
 <p align="center">
 	<img src="https://raw.githubusercontent.com/thelounge/thelounge.github.io/master/img/thelounge-screenshot.png" width="550">
+	Demo of a autofill feature using ediapi
 </p>
 
 * **HCPCS** and **NDC** Codeets currently supported.
