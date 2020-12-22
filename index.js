@@ -33,7 +33,6 @@ app.get("/codes", (request, response) => {
     if (error) {
       return response.status(500).send(error);
     }
-    console.log(result)
     response.send(result);
   });
 });
