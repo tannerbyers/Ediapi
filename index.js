@@ -37,7 +37,7 @@ app.get("/", (request, response) => {
 });
 
 app.get("/codes", (request, response) => {
-  collection.find({}).toArray((error, result) => {
+  collection.find({}).limit(100).toArray((error, result) => {
     if (error) {
       return response.status(500).send(error);
     }
@@ -45,15 +45,15 @@ app.get("/codes", (request, response) => {
   });
 });
 
-app.get("/codes/:id", (request, response) => {
+app.get("/codes/:value", (request, response) => {
   collection
     .find({
       $or: [
         {
-          code: { $regex: `.*${request.params.id}.*` },
+          code: { $regex: `.*${request.params.value}.*` },
         },
         {
-          longDescription: { $regex: `.*${request.params.id}.*` },
+          longDescription: { $regex: `.*${request.params.value}.*` },
         },
       ],
     })
