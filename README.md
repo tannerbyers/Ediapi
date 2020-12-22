@@ -39,9 +39,8 @@
 * Run **Locally** w/ customziations or use the **<a href="https://healthcarecodesetapi.herokuapp.com/codes/"> public api </a>**.
 * **HCPCS** and **NDC** Code sets currently supported.
 * Add Ediapi to your existing software to validate **x12 or HL7** transactions.
-* **Hight Customized** to fit different use cases: large file based x12 processing engines
- or small online widgets (like autofill tool).
-* Can provide **Code, Description, Dates, and more** for codes or paremeteries specified. Great for newcomers into the healthcare field! 
+* **Highly Customizable** to fit different use cases:  from large file-based x12 processing engines to small online widgets (ex: autofill search).
+* API provides **Code, Description, Dates, and more** for codes or parameters specified. Great for newcomers into the healthcare field! 
 
 ---
 
@@ -61,11 +60,11 @@ npm start
 | Backend | Javascript | 
 
 ## Process
-Ediapi is a api built around Healthcare Codes. It scrapes CMS and other healthcare websites, pulls and formats their codeset spreadsheets and provides this data via an easy to use api.
+Ediapi is an api built around Healthcare Codes. It scrapes CMS and other healthcare websites, pulls and formats their codeset spreadsheets and provides this data via an easy to use api.
 
 ## Background
 I want to make an easy to use frontend and api for healthcare codesets so
-that people can easily make projects or improvie their existing ones. 
+that people can easily make projects or improve their existing ones. 
 
 ⚠️ I do not work on this full time so it will not always be up to date. 
 The updates to the codesets are made by either cron jobs (depending on when the
