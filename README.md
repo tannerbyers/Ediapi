@@ -48,8 +48,8 @@
 
 ## Usage
 ```
-git clone 
-cd ediapi
+git clone https://github.com/tannerbyers/Ediapi.git
+cd Ediapi
 npm install
 npm run update-codes
 npm start 
