@@ -22,9 +22,6 @@
 	<a href="https://github.com/tannerbyers/Ediapi/issues"><img
 		alt="Open Issues"
 		src="https://img.shields.io/github/issues/tannerbyers/ediapi"></a>
-	<a href="https://github.com/tannerbyers/Ediapi/issues"><img
-		alt="Uptime"
-		src="https://img.shields.io/uptimerobot/ratio/m786727822-1185e454c643e3e40b2a2eb4"></a>
 	<a href="https://img.shields.io/github/languages/code-size/tannerbyers/ediapi"><img
 		alt="Total project size"
 		src="https://img.shields.io/github/languages/code-size/tannerbyers/ediapi"></a>
