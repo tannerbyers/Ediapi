@@ -6,7 +6,7 @@ const ObjectId = require("mongodb").ObjectID;
 const CONNECTION_URL =
   "mongodb+srv://codeUser:P4ppN72KhGuGpJD9@codetable.ubtee.mongodb.net/CodeTable?retryWrites=true&w=majority";
 const DATABASE_NAME = "CodeTable";
-const config = require('./config.json');
+const config = require("./config.json");
 
 var app = Express();
 app.use(BodyParser.json());
@@ -26,6 +26,10 @@ app.listen(process.env.PORT || 5000, () => {
       console.log("Connected to `" + DATABASE_NAME + "`!");
     }
   );
+});
+
+app.get("/", (request, response) => {
+  response.send("Hello World");
 });
 
 app.get("/codes", (request, response) => {
