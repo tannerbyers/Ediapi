@@ -9,7 +9,7 @@ const DATABASE_NAME = "CodeTable";
 const config = require("./config.json");
 
 // Import the library:
-var cors = require('cors');
+var cors = require("cors");
 
 var app = Express();
 app.use(cors());
@@ -37,12 +37,15 @@ app.get("/", (request, response) => {
 });
 
 app.get("/codes", (request, response) => {
-  collection.find({}).limit(100).toArray((error, result) => {
-    if (error) {
-      return response.status(500).send(error);
-    }
-    response.send(result);
-  });
+  collection
+    .find({})
+    .limit(100)
+    .toArray((error, result) => {
+      if (error) {
+        return response.status(500).send(error);
+      }
+      response.send(result);
+    });
 });
 
 app.get("/codes/:value", (request, response) => {
@@ -57,6 +60,7 @@ app.get("/codes/:value", (request, response) => {
         },
       ],
     })
+    .limit(100)
     .toArray(function (error, result) {
       if (error) {
         return response.status(500).send(error);
