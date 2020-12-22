@@ -38,6 +38,7 @@
 	<p align="center"> Demo of a autofill feature using ediapi </p>
 </p>
 
+* Run **Locally** w/ customziations or use the **<a href="https://healthcarecodesetapi.herokuapp.com/codes/"> public api </a>**.
 * **HCPCS** and **NDC** Codeets currently supported.
 * Add Ediapi to your existing software to validate **x12 or HL7** transactions.
 * **Hight Customized** to fit different use cases: large file based x12 processing engines
