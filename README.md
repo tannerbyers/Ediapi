@@ -11,11 +11,11 @@
 
 <p align="center">
 	<strong>
-		<a href="https://thelounge.chat/">Website</a>
+		<a href="https://healthcarecodesetapi.herokuapp.com/codes/">Website</a>
 		•
-		<a href="https://thelounge.chat/docs">Docs</a>
+		<a href="todo">Docs</a>
 		•
-		<a href="https://demo.thelounge.chat/">Demo</a>
+		<a href="https://healthcarecodesetapi.herokuapp.com/codes/">Demo</a>
 	</strong>
 </p>
 <p align="center">
