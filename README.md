@@ -46,6 +46,15 @@
 
 ---
 
+## Usage
+```
+git clone 
+cd ediapi
+npm install
+npm run update-codes
+npm start 
+```
+
 | System Parts  | Technology Used |
 | ------------- | ------------- |
 | Server  | Heroku  |
