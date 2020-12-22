@@ -32,7 +32,7 @@
 </p>
 
 * **HCPCS** and **NDC** Codeets currently supported.
-* Add Ediapi your software to validate x12 transactions.
+* Add Ediapi to your existing software to validate **x12 or HL7** transactions.
 * **Hight Customized** to fit different use cases: large file based x12 processing engines
  or small online widgets (like autofill tool).
 * Can provide **Code, Description, Dates, and more** for codes or paremeteries specified. You do not have to know the code to search! 
