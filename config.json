@@ -1,6 +1,6 @@
 {
     "defaults": {
-        "connection_url":   "mongodb+srv://codeUser:P4ppN72KhGuGpJD9@codetable.ubtee.mongodb.net/CodeTable?retryWrites=true&w=majority",
+        "connection_url":   "",
         "database_name": "CodeTable",
         "collection_name": "Codes",
         "preferred_port": "5000"
