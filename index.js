@@ -2,7 +2,12 @@ const Express = require("express");
 const BodyParser = require("body-parser");
 const MongoClient = require("mongodb").MongoClient;
 const ObjectId = require("mongodb").ObjectID;
-const CONNECTION_URL = require('./config.js')
+let CONNECTION_URL = require('./config.js')
+
+// If the config is not changed, use env vars 
+if (CONNECTION_URL == "mongodb+srv://USERNAME:sdfg434234sdfgs@codetable.ubtee.mongodb.net/CodeTable?retryWrites=true&w=majority" || CONNECTION_URL == null) {
+  CONNECTION_URL = process.env.CONNECTION_URL
+}
 const DATABASE_NAME = "CodeTable";
 
 // Import the library:
