@@ -5,7 +5,7 @@ const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 const extract = require("extract-zip");
 const xlsx = require("node-xlsx").default;
-
+let CONNECTION_URL;
 const MongoClient = require("mongodb").MongoClient;
 
 // If the config is not changed, use env vars
