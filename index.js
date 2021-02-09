@@ -4,24 +4,8 @@ const fs = require("fs");
 
 const MongoClient = require("mongodb").MongoClient;
 const ObjectId = require("mongodb").ObjectID;
-let CONNECTION_URL;
+const CONNECTION_URL = process.env.CONNECTION_URL;
 
-// If the config is not changed, use env vars
-if (process.env.CONNECTION_URL) {
-  CONNECTION_URL = process.env.CONNECTION_URL;
-} else {
-  fs.stat("config.js", function (err, stat) {
-    if (err == null) {
-      // file exists
-      CONNECTION_URL = require("./config.js");
-    } else if (err.code === "ENOENT") {
-      // file does not exist
-      console.log("No DB Connection Listed in Config or env vars")
-    } else {
-      console.log("Some other error: ", err.code);
-    }
-  });
-}
 
 const DATABASE_NAME = "CodeTable";
 
@@ -35,7 +19,7 @@ app.use(BodyParser.urlencoded({ extended: true }));
 var database, collection;
 
 app.listen(process.env.PORT || 5000, () => {
-  console.log(CONNECTION_URL);
+  console.log({CONNECTION_URL});
   MongoClient.connect(
     CONNECTION_URL,
     { useNewUrlParser: true },

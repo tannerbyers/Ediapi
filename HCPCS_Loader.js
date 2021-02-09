@@ -6,25 +6,8 @@ const { JSDOM } = jsdom;
 const extract = require("extract-zip");
 const xlsx = require("node-xlsx").default;
 const MongoClient = require("mongodb").MongoClient;
+const CONNECTION_URL = process.env.CONNECTION_URL;
 
-let CONNECTION_URL;
-
-// If the config is not changed, use env vars
-if (process.env.CONNECTION_URL) {
-  CONNECTION_URL = process.env.CONNECTION_URL;
-} else {
-  fs.stat("config.js", function (err, stat) {
-    if (err == null) {
-      // file exists
-      CONNECTION_URL = require("./config.js");
-    } else if (err.code === "ENOENT") {
-      // file does not exist
-      console.log("No DB Connection Listed in Config or env vars")
-    } else {
-      console.log("Some other error: ", err.code);
-    }
-  });
-}
 
 let newHCPCSZipFile;
 const baseurl = "https://www.cms.gov";
