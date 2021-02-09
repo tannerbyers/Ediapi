@@ -2,7 +2,6 @@ const Express = require("express");
 const BodyParser = require("body-parser");
 const MongoClient = require("mongodb").MongoClient;
 const ObjectId = require("mongodb").ObjectID;
-let CONNECTION_URL = require("./config.js");
 
 // If the config is not changed, use env vars
 fs.stat("config.js", function (err, stat) {
