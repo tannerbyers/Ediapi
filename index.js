@@ -1,12 +1,9 @@
-const cron = require("node-cron");
 const Express = require("express");
 const BodyParser = require("body-parser");
 const MongoClient = require("mongodb").MongoClient;
 const ObjectId = require("mongodb").ObjectID;
-const CONNECTION_URL =
-  "mongodb+srv://codeUser:P4ppN72KhGuGpJD9@codetable.ubtee.mongodb.net/CodeTable?retryWrites=true&w=majority";
+const CONNECTION_URL = require('./config.js')
 const DATABASE_NAME = "CodeTable";
-const config = require("./config.json");
 
 // Import the library:
 var cors = require("cors");
@@ -67,11 +64,4 @@ app.get("/codes/:value", (request, response) => {
       }
       response.send(result);
     });
-});
-
-// Schedule tasks to be run on the server.
-
-// Load HCPCS Codes From CMS Annually
-cron.schedule("0 0 1 1 *", function () {
-  console.log("Running tasks every year");
 });

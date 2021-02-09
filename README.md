@@ -46,10 +46,12 @@
 
 ## Usage
 ```
-git clone https://github.com/tannerbyers/Ediapi.git
-cd Ediapi
 npm install
+
+# This will load all the codesets listed in codesetLoader.js
 npm run update-codes
+
+# This will start the API Server
 npm start 
 ```
 
