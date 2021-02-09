@@ -48,6 +48,9 @@
 ```
 npm install
 
+# Copy the config file and update it's values
+cp example-config.js config.js
+
 # This will load all the codesets listed in codesetLoader.js
 npm run update-codes
 
