@@ -7,8 +7,19 @@ const extract = require("extract-zip");
 const xlsx = require("node-xlsx").default;
 
 const MongoClient = require("mongodb").MongoClient;
-const CONNECTION_URL = require("./config.js");
 
+// If the config is not changed, use env vars
+fs.stat("config.js", function (err, stat) {
+  if (err == null) {
+    // file exists
+    CONNECTION_URL = require("./config.js");
+  } else if (err.code === "ENOENT") {
+    // file does not exist
+    CONNECTION_URL = process.env.CONNECTION_URL;
+  } else {
+    console.log("Some other error: ", err.code);
+  }
+});
 let newHCPCSZipFile;
 const baseurl = "https://www.cms.gov";
 const url =
