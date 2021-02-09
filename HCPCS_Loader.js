@@ -5,21 +5,26 @@ const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 const extract = require("extract-zip");
 const xlsx = require("node-xlsx").default;
-let CONNECTION_URL
 const MongoClient = require("mongodb").MongoClient;
 
+let CONNECTION_URL;
+
 // If the config is not changed, use env vars
-fs.stat("config.js", function (err, stat) {
-  if (err == null) {
-    // file exists
-    CONNECTION_URL = require("./config.js");
-  } else if (err.code === "ENOENT") {
-    // file does not exist
-    CONNECTION_URL = process.env.CONNECTION_URL;
-  } else {
-    console.log("Some other error: ", err.code);
-  }
-});
+if (process.env.CONNECTION_URL) {
+  CONNECTION_URL = process.env.CONNECTION_URL;
+} else {
+  fs.stat("config.js", function (err, stat) {
+    if (err == null) {
+      // file exists
+      CONNECTION_URL = require("./config.js");
+    } else if (err.code === "ENOENT") {
+      // file does not exist
+      console.log("No DB Connection Listed in Config or env vars")
+    } else {
+      console.log("Some other error: ", err.code);
+    }
+  });
+}
 
 let newHCPCSZipFile;
 const baseurl = "https://www.cms.gov";
