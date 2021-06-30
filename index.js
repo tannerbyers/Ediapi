@@ -1,11 +1,11 @@
 const Express = require("express");
 const BodyParser = require("body-parser");
 const fs = require("fs");
-
 const MongoClient = require("mongodb").MongoClient;
 const ObjectId = require("mongodb").ObjectID;
-const CONNECTION_URL = process.env.CONNECTION_URL;
 
+const config = require('./config.js')
+const CONNECTION_URL = config.mongodburl
 
 const DATABASE_NAME = "CodeTable";
 
@@ -16,46 +16,34 @@ var app = Express();
 app.use(cors());
 app.use(BodyParser.json());
 app.use(BodyParser.urlencoded({ extended: true }));
-var database, collection;
 
 app.listen(process.env.PORT || 5000, () => {
-  console.log({CONNECTION_URL});
   MongoClient.connect(
     CONNECTION_URL,
     { useNewUrlParser: true },
-    (error, client) => {
+    async (error, client) => {
       if (error) {
         throw error;
       }
       database = client.db(DATABASE_NAME);
-      collection = database.collection("Codes");
       console.log("Connected to `" + DATABASE_NAME + "`!");
     }
   );
+  console.log("server started");
 });
 
-app.get("/", (request, response) => {
-  response.send("Hello World");
+app.get("/", (req, resp) => {
+  resp.send("Ediapi started. Visit documentation for other routes");
 });
 
-app.get("/codes", (request, response) => {
-  collection
-    .find({})
-    .limit(100)
-    .toArray((error, result) => {
-      if (error) {
-        return response.status(500).send(error);
-      }
-      response.send(result);
-    });
-});
+app.get("/codes/hcpcs/:value", async (request, response) => {
+  let collection = await database.collection("HCPCS");
 
-app.get("/codes/:value", (request, response) => {
   collection
     .find({
       $or: [
         {
-          code: { $regex: `.*${request.params.value}.*` },
+          code: { $regex: `.*${request.params.value}.*` }, 
         },
         {
           longDescription: { $regex: `.*${request.params.value}.*` },

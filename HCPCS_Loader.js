@@ -6,8 +6,8 @@ const { JSDOM } = jsdom;
 const extract = require("extract-zip");
 const xlsx = require("node-xlsx").default;
 const MongoClient = require("mongodb").MongoClient;
-const CONNECTION_URL = process.env.CONNECTION_URL;
-
+const config = require('./config.js')
+const CONNECTION_URL = config.mongodburl
 
 let newHCPCSZipFile;
 const baseurl = "https://www.cms.gov";
@@ -83,7 +83,7 @@ const XLSToMongoDB = async () => {
       //Column Names
       console.log(workSheetsFromFile[0].data[10]);
       client.connect(async (err) => {
-        const collection = client.db("CodeTable").collection("Codes");
+        const collection = client.db("CodeTable").collection("HCPCS");
 
         datasheet = workSheetsFromFile[0].data;
 
