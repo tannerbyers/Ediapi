@@ -11,11 +11,9 @@
 
 <p align="center">
 	<strong>
-		<a href="https://healthcarecodesetapi.herokuapp.com/codes/">Website</a>
+		<a href="https://healthcarecodesetapi.herokuapp.com/codes/">API url</a>
 		•
-		<a href="todo">Docs</a>
-		•
-		<a href="https://healthcarecodesetapi.herokuapp.com/codes/">Demo</a>
+		<a href="https://euphonious-pithivier-561736.netlify.app/">Demo</a>
 	</strong>
 </p>
 <p align="center">
