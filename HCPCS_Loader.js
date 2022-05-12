@@ -6,8 +6,16 @@ const { JSDOM } = jsdom;
 const extract = require("extract-zip");
 const xlsx = require("node-xlsx").default;
 const MongoClient = require("mongodb").MongoClient;
-const config = require('./config.js')
-const CONNECTION_URL = config.mongodburl
+const dotenv = require('dotenv');
+dotenv.config();
+
+
+const CONNECTION_URL = process.env.CONNECTION_URL;
+
+
+
+console.log({ CONNECTION_URL });
+const client = new MongoClient(CONNECTION_URL, { useNewUrlParser: true });
 
 let newHCPCSZipFile;
 const baseurl = "https://www.cms.gov";
@@ -18,9 +26,8 @@ const getHCPCSZipFile = async () => {
   got(url)
     .then((response) => {
       const dom = new JSDOM(response.body);
-      let currentYear = 2020
+      let currentYear = 2020;
       dom.window.document.querySelectorAll("a").forEach((link) => {
-
         if (link.href.includes(`${currentYear}-Alpha-Numeric-HCPCS-File`)) {
           console.log(link.href);
           got(baseurl + link.href).then((response) => {
@@ -76,20 +83,15 @@ const XLSToMongoDB = async () => {
       filename.includes("ANWEB_w_disclaimer.xls")
     );
     console.log(HCPCSFiles);
-    const client = new MongoClient(CONNECTION_URL, { useNewUrlParser: true });
-
-    HCPCSFiles.forEach((file) => {
+    HCPCSFiles.forEach(async (file) => {
       const workSheetsFromFile = xlsx.parse(`${unzippedDir}/${file}`);
       //Column Names
       console.log(workSheetsFromFile[0].data[10]);
-      client.connect(async (err) => {
+      try {
+        await client.connect();
         const collection = client.db("CodeTable").collection("HCPCS");
 
         datasheet = workSheetsFromFile[0].data;
-
-        if (err) {
-          console.log(err);
-        }
 
         // Insert the rows into MONGODB
         for (let i = 10; i < workSheetsFromFile[0].data.length; i++) {
@@ -110,7 +112,9 @@ const XLSToMongoDB = async () => {
         }
         console.log("Finsihed Updated HCPCS Codes");
         client.close();
-      });
+      } finally {
+        await client.close;
+      }
     });
   });
 };

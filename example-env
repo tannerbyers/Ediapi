@@ -1,0 +1,1 @@
+CONNECTION_URL = mongodb+srv://<username>:<password>@<database>.ubtee.mongodb.net/<database>?retryWrites=true&w=majority

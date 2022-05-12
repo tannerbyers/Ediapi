@@ -48,8 +48,8 @@
 ```
 npm install
 
-# Copy the config file and update it's values
-cp example-config.js config.js
+# Copy the config file and update it's values with your mongodb url
+cp example-env .env
 
 # This will load all the codesets listed in codesetLoader.js
 npm run update-codes

@@ -4,8 +4,10 @@ const fs = require("fs");
 const MongoClient = require("mongodb").MongoClient;
 const ObjectId = require("mongodb").ObjectID;
 
-const config = require('./config.js')
-const CONNECTION_URL = config.mongodburl
+const dotenv = require("dotenv");
+dotenv.config();
+
+const CONNECTION_URL = process.env.CONNECTION_URL;
 
 const DATABASE_NAME = "CodeTable";
 
@@ -17,7 +19,7 @@ app.use(cors());
 app.use(BodyParser.json());
 app.use(BodyParser.urlencoded({ extended: true }));
 
-app.listen(process.env.PORT || 5000, () => {
+app.listen(process.env.PORT || 6363, () => {
   MongoClient.connect(
     CONNECTION_URL,
     { useNewUrlParser: true },
@@ -43,7 +45,7 @@ app.get("/codes/hcpcs/:value", async (request, response) => {
     .find({
       $or: [
         {
-          code: { $regex: `.*${request.params.value}.*` }, 
+          code: { $regex: `.*${request.params.value}.*` },
         },
         {
           longDescription: { $regex: `.*${request.params.value}.*` },
