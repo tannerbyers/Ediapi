@@ -52,7 +52,7 @@ app.get("/codes/hcpcs/:value", async (request, response) => {
         },
       ],
     })
-    .limit(100)
+    .limit(10)
     .toArray(function (error, result) {
       if (error) {
         return response.status(500).send(error);
